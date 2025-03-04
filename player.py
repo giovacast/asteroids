@@ -1,5 +1,6 @@
-from circleshape import *
 from constants import *
+from circleshape import CircleShape
+import pygame
 
 
 class Player(CircleShape):
