@@ -1,4 +1,4 @@
-import pygame
+import pygame   
 from constants import *
 import circleshape
 import player
@@ -30,6 +30,10 @@ def main():
              item.draw(screen)
 
         updatables.update(dt)
+
+        for item in asteroids:
+            item.check_for_collision(player1)
+
         pygame.display.flip()
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
