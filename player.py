@@ -40,7 +40,8 @@ class Player(CircleShape):
 			self.shoot()
 	
 		# Update all shots
-		for shot in self.shots:
+		# Use a copy of the list to modify while iterating
+		for shot in self.shots[:]: 
 			shot.update(dt)
 	
 	def move(self, dt):
